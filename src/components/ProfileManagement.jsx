@@ -218,7 +218,7 @@ const ProfileManagement = ({ onClose }) => {
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <div>
-                    <CardTitle className="flex items-center space-x-2">
+                    <CardTitle className="flex items-center space-x-2 text-foreground">
                       <User className="h-5 w-5" />
                       <span>Personal Information</span>
                     </CardTitle>
@@ -247,7 +247,7 @@ const ProfileManagement = ({ onClose }) => {
               <CardContent className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="username">Username</Label>
+                    <Label htmlFor="username" className="text-foreground">Username</Label>
                     <Input
                       id="username"
                       value={profileForm.username}
@@ -257,7 +257,7 @@ const ProfileManagement = ({ onClose }) => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
+                    <Label htmlFor="email" className="text-foreground">Email</Label>
                     <Input
                       id="email"
                       type="email"
@@ -268,7 +268,7 @@ const ProfileManagement = ({ onClose }) => {
                     />
                   </div>
                   <div className="space-y-2 md:col-span-2">
-                    <Label htmlFor="phone">Phone Number</Label>
+                    <Label htmlFor="phone" className="text-foreground">Phone Number</Label>
                     <Input
                       id="phone"
                       value={profileForm.phoneNumber}
@@ -286,7 +286,7 @@ const ProfileManagement = ({ onClose }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <Card className="border-border">
                 <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
+                  <CardTitle className="flex items-center space-x-2 text-foreground">
                     <Wallet className="h-5 w-5 text-game-gold" />
                     <span>Current Balance</span>
                   </CardTitle>
@@ -303,14 +303,14 @@ const ProfileManagement = ({ onClose }) => {
 
               <Card className="border-border">
                 <CardHeader>
-                  <CardTitle>Wallet Actions</CardTitle>
+                  <CardTitle className="text-foreground">Wallet Actions</CardTitle>
                   <CardDescription>
                     Add or withdraw money from your account
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="amount">Amount (₹)</Label>
+                    <Label htmlFor="amount" className="text-foreground">Amount (₹)</Label>
                     <Input
                       id="amount"
                       type="number"
@@ -348,17 +348,17 @@ const ProfileManagement = ({ onClose }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <Card className="border-border">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-sm font-medium">Total Games</CardTitle>
+                  <CardTitle className="text-sm font-medium text-foreground">Total Games</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">{userStats.totalGamesPlayed || 0}</div>
+                  <div className="text-2xl font-bold text-foreground">{userStats.totalGamesPlayed || 0}</div>
                   <p className="text-xs text-muted-foreground">Games played</p>
                 </CardContent>
               </Card>
 
               <Card className="border-border">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-sm font-medium">Win Rate</CardTitle>
+                  <CardTitle className="text-sm font-medium text-foreground">Win Rate</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold text-game-green">
@@ -370,7 +370,7 @@ const ProfileManagement = ({ onClose }) => {
 
               <Card className="border-border">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-sm font-medium">Total Won</CardTitle>
+                  <CardTitle className="text-sm font-medium text-foreground">Total Won</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold text-game-gold">
@@ -382,10 +382,10 @@ const ProfileManagement = ({ onClose }) => {
 
               <Card className="border-border">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-sm font-medium">Total Bet</CardTitle>
+                  <CardTitle className="text-sm font-medium text-foreground">Total Bet</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">
+                  <div className="text-2xl font-bold text-foreground">
                     ₹{userStats.totalAmountBet ? userStats.totalAmountBet.toFixed(2) : '0.00'}
                   </div>
                   <p className="text-xs text-muted-foreground">Amount wagered</p>
@@ -394,7 +394,7 @@ const ProfileManagement = ({ onClose }) => {
 
               <Card className="border-border">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-sm font-medium">Biggest Win</CardTitle>
+                  <CardTitle className="text-sm font-medium text-foreground">Biggest Win</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold text-game-purple">
@@ -406,10 +406,10 @@ const ProfileManagement = ({ onClose }) => {
 
               <Card className="border-border">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-sm font-medium">Current Streak</CardTitle>
+                  <CardTitle className="text-sm font-medium text-foreground">Current Streak</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">
+                  <div className="text-2xl font-bold text-foreground">
                     {userStats.currentStreak || 0}
                   </div>
                   <p className="text-xs text-muted-foreground">
@@ -421,26 +421,26 @@ const ProfileManagement = ({ onClose }) => {
 
             <Card className="border-border">
               <CardHeader>
-                <CardTitle>Performance Overview</CardTitle>
+                <CardTitle className="text-foreground">Performance Overview</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">Games Won</span>
+                    <span className="text-sm font-medium text-foreground">Games Won</span>
                     <span className="text-sm text-game-green">
                       {userStats.totalGamesWon || 0} / {userStats.totalGamesPlayed || 0}
                     </span>
                   </div>
                   <Separator />
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">Longest Win Streak</span>
+                    <span className="text-sm font-medium text-foreground">Longest Win Streak</span>
                     <span className="text-sm text-game-gold">
                       {userStats.longestWinStreak || 0} games
                     </span>
                   </div>
                   <Separator />
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">Last Game Played</span>
+                    <span className="text-sm font-medium text-foreground">Last Game Played</span>
                     <span className="text-sm text-muted-foreground">
                       {userStats.lastGamePlayed 
                         ? new Date(userStats.lastGamePlayed).toLocaleDateString()

@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
-import GameHeader from '@/components/GameHeader';
+// import GameHeader from '@/components/GameHeader';
 import CountdownTimer from '@/components/CountdownTimer';
-import BettingInterface from '@/components/BettingInterface';
-import GameHistory from '@/components/GameHistory';
-import LiveStats from '@/components/LiveStats';
+// import BettingInterface from '@/components/BettingInterface';
+// import GameHistory from '@/components/GameHistory';
+// import LiveStats from '@/components/LiveStats';
 import { toast } from '@/hooks/use-toast';
 
 interface GameResult {
@@ -148,10 +148,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <GameHeader 
+      {/* <GameHeader 
         balance={balance} 
         onProfileClick={handleProfileClick}
-      />
+      /> */}
       
       <main className="container mx-auto px-4 py-6 space-y-6">
         {/* Game Timer and Stats Row */}
@@ -168,25 +168,25 @@ const Index = () => {
           </div>
 
           {/* Live Stats */}
-          <div className="lg:col-span-2">
+          {/* <div className="lg:col-span-2">
             <LiveStats
               currentRoundBets={currentRoundBets}
               totalPlayers={totalPlayers}
               roundId={currentRoundId}
             />
-          </div>
+          </div> */}
         </div>
 
         {/* Betting Interface and History Row */}
         <div className="grid lg:grid-cols-2 gap-6">
           {/* Betting Interface */}
           <div>
-            <BettingInterface
+            {/* <BettingInterface
               onPlaceBet={handlePlaceBet}
               disabled={!!userCurrentBet}
               balance={balance}
               minBet={MIN_BET}
-            />
+            /> */}
             
             {userCurrentBet && (
               <div className="mt-4 p-4 bg-primary/10 border border-primary/20 rounded-lg">
@@ -201,9 +201,9 @@ const Index = () => {
           </div>
 
           {/* Game History */}
-          <div>
+          {/* <div>
             <GameHistory results={gameHistory} />
-          </div>
+          </div> */}
         </div>
 
         {/* Additional Info */}

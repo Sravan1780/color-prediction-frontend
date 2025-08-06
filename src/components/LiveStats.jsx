@@ -11,7 +11,7 @@ const LiveStats = ({ currentRoundBets, totalPlayers, roundId }) => {
   return (
     <div className="bg-card border border-border rounded-xl p-6 space-y-6">
       <div className="flex items-center justify-between">
-        <h3 className="text-lg font-semibold">Live Round</h3>
+        <h3 className="text-lg font-semibold text-foreground">Live Round</h3>
         <Badge variant="outline" className="font-mono text-xs">
           #{roundId.toString().slice(-3)}
         </Badge>
@@ -71,14 +71,14 @@ const LiveStats = ({ currentRoundBets, totalPlayers, roundId }) => {
           <Users className="h-4 w-4 text-primary" />
           <div>
             <div className="text-xs text-muted-foreground">Players</div>
-            <div className="font-semibold">{totalPlayers}</div>
+            <div className="font-semibold text-foreground">{totalPlayers}</div>
           </div>
         </div>
         <div className="flex items-center space-x-2">
           <DollarSign className="h-4 w-4 text-game-gold" />
           <div>
             <div className="text-xs text-muted-foreground">Total Pool</div>
-            <div className="font-semibold">₹{totalBets.toFixed(2)}</div>
+            <div className="font-semibold text-foreground">₹{totalBets.toFixed(2)}</div>
           </div>
         </div>
       </div>

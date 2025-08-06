@@ -91,7 +91,7 @@ const GameHeader = ({ balance = 0, onProfileClick, refreshBalance }) => {
                 variant="outline"
                 size="sm"
                 onClick={handleAuthClick}
-                className="border-border hover:bg-primary/10"
+                className="border-border hover:bg-primary/10 text-foreground"
               >
                 <User className="h-4 w-4 mr-2" />
                 {user.username || user.email || 'Profile'}
@@ -110,7 +110,7 @@ const GameHeader = ({ balance = 0, onProfileClick, refreshBalance }) => {
               variant="outline"
               size="sm"
               onClick={handleAuthClick}
-              className="border-border hover:bg-primary/10"
+              className="border-border hover:bg-primary/10 text-foreground"
             >
               <LogIn className="h-4 w-4 mr-2" />
               Login

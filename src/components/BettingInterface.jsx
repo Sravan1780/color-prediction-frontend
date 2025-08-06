@@ -27,13 +27,13 @@ const BettingInterface = ({ onPlaceBet, disabled, balance, minBet }) => {
   return (
     <div className="bg-card border border-border rounded-xl p-6 space-y-6">
       <div className="text-center">
-        <h3 className="text-lg font-semibold mb-2">Place Your Bet</h3>
+        <h3 className="text-lg font-semibold mb-2 text-foreground">Place Your Bet</h3>
         <p className="text-sm text-muted-foreground">Choose color and amount</p>
       </div>
 
       <div className="space-y-4">
         <div className="flex items-center justify-between">
-          <span className="text-sm font-medium">Bet Amount</span>
+          <span className="text-sm font-medium text-foreground">Bet Amount</span>
           <Badge variant="outline" className="text-xs">
             Min: ₹{minBet}
           </Badge>
@@ -78,7 +78,7 @@ const BettingInterface = ({ onPlaceBet, disabled, balance, minBet }) => {
               size="sm"
               onClick={() => handleAmountChange(amount)}
               disabled={amount > balance}
-              className="text-xs"
+              className="text-xs text-white"
             >
               ₹{amount}
             </Button>

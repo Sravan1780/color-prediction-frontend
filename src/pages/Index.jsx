@@ -440,19 +440,19 @@ const Index = () => {
 
         {/* Additional Info */}
         <div className="bg-card border border-border rounded-xl p-6 text-center">
-          <h3 className="text-lg font-semibold mb-2">How to Play</h3>
+          <h3 className="text-lg font-semibold mb-2 text-foreground">How to Play</h3>
           <div className="grid md:grid-cols-3 gap-4 text-sm text-muted-foreground">
             <div>
               <div className="font-semibold text-foreground mb-1">1. Choose Color</div>
-              <p>Select RED or GREEN</p>
+              <p className="text-muted-foreground">Select RED or GREEN</p>
             </div>
             <div>
               <div className="font-semibold text-foreground mb-1">2. Place Bet</div>
-              <p>Enter amount and confirm</p>
+              <p className="text-muted-foreground">Enter amount and confirm</p>
             </div>
             <div>
               <div className="font-semibold text-foreground mb-1">3. Win 2x</div>
-              <p>Correct prediction pays 2:1</p>
+              <p className="text-muted-foreground">Correct prediction pays 2:1</p>
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ const GameHistory = ({ results }) => {
   return (
     <div className="bg-card border border-border rounded-xl p-6">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold">Game History</h3>
+        <h3 className="text-lg font-semibold text-foreground">Game History</h3>
         <Badge variant="outline" className="text-xs">
           Last {results.length} rounds
         </Badge>
@@ -47,7 +47,7 @@ const GameHistory = ({ results }) => {
                   <div className={`w-3 h-3 rounded-full ${
                     result.winningColor === 'red' ? 'bg-red-500' : 'bg-green-500'
                   }`} />
-                  <span className="font-medium text-sm">
+                  <span className="font-medium text-sm text-foreground">
                     {result.winningColor.toUpperCase()}
                   </span>
                 </div>
